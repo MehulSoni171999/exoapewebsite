@@ -1,0 +1,1456 @@
+@font-face {
+    font-family:"TWK Lausanne 300" ;
+    src: url(./TWKLausanne-300.7842412\ \(2\)\(1\).ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body{
+   
+    width: 100%;
+    height: 100%;
+    font-family: 'TWK Lausanne 300';
+}
+
+#loder-overlay{
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+background-color:rgba(255, 255, 255, 0.8);
+transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+color: #fff;
+z-index: 9999;
+}
+#loder-overlay>img{
+position: absolute;
+    width: 20%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+#mouse-circle{
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+   transform: translate(-50%,-25%);
+    backdrop-filter: blur(2px);
+background-color: rgba(51, 51, 51, 0.49);
+overflow-x: hidden;
+z-index: 999;
+pointer-events: none;
+transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+#mouse-circle>h1{
+    position: absolute;
+    font-size: 15px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#home{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+#main{
+ 
+   
+    width: 100%;
+    height: 1816px;
+ 
+}
+
+#background{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+
+}
+#background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+object-position: top;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#nav{
+        position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    background-color: transparent;
+    padding: 5% 3%;
+    color: #fff;
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    
+    font-size: 25px;
+    /* font-family: "TWKLausanne"; */
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 50px;
+
+    font-size: 25px;
+}
+#header{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 100%;
+    /* background-color: rgba(20, 15, 15, 0.936); */
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 80px;
+color: #fff;
+font-family: 'TWK Lausanne 300';
+/* overflow: hidden; */
+
+}
+
+#overlay-1{
+    width: 80vw;
+    height: 100%;
+    /* background-color: rgba(106, 10, 10, 0.29); */
+    
+}
+#overlay-2{
+position: absolute;
+display: flex;
+flex-direction: column;
+    width: 80vw;
+    height: 100%;
+    /* background-color:rgba(43, 100, 52, 0.56); */
+    overflow: visible;
+    top: 90%;
+}
+#pera-a{
+position: absolute;
+    width: 45%;
+    height: 13%; 
+    font-size: 30px;
+    color: #fff;
+    top: 68%;
+    left: 25px;
+}
+
+.main-text{
+    position: absolute;
+    width: 100%;
+height: 80%;
+
+color: #fff;
+font-family: 'TWK Lausanne 300';
+text-transform: capitalize;
+top: 0%;
+left: 0%;
+}
+.main-text>h2{
+    font-size: 300px;
+    font-weight: 150;
+    line-height: 280px;
+    
+}
+.main-text>h1{
+    font-size: 280px;
+    font-weight: 150;
+}
+
+
+#overlay-3{
+position: absolute;
+        width: 80vw;
+        height: 80%;
+        /* background-color:rgba(52, 43, 100, 0.56); */
+        overflow: hidden;
+    }
+    #pera-b{
+
+        width: 40%;
+        height: 30%; 
+        font-size: 30px;
+        font-weight: 300;
+        color: #fff;
+           text-transform: none; 
+           font-family: 'TWK Lausanne 300';
+           margin-top: 150px;
+
+}
+.lower{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0%;
+  
+    font-size: 20px;
+}
+.lower-right{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+    width: 35%;
+    height: 100%;
+
+right: 0%;
+text-transform: capitalize;
+}
+.lower-r2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 40%;
+
+right: 0%;
+}
+.lower-left{
+    
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    width: 20%;
+    height: 20%;
+    left: 10%;
+    top: 50%;
+
+text-transform: capitalize;
+text-decoration: underline;
+text-align: 10px;
+}
+
+#second-slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(23, 160, 80); */
+    scroll-behavior: smooth;
+}
+
+
+
+
+.first-left{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    /* background-color: beige; */
+    top: 5%;
+    left: 10%;
+    overflow: hidden;
+}
+.first-left h1{
+    font-size: 350px;
+    font-family: 'TWK Lausanne 300';
+    font-weight: 100;
+}
+
+.first-left>h1>span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+#second-left-v{
+    /* position: absolute; */
+    width: 40%;
+    height: 95%;
+    background-color: aquamarine;
+    /* top: 50%;
+    left: 10%; */
+    margin: 25% 12%;
+}
+.spera{
+    position: absolute;
+    width: 40%;
+    height: 2%;
+    color: black;
+    font-size: 20px;
+margin-top: 80%;
+margin-left: 12%;
+}
+#second-right-v{
+    /* position: absolute; */
+    width: 25%;
+    height: 75%;
+    /* background-color: rgb(72, 97, 207); */
+    /* top: 100%;
+    right: 10%; */
+    margin: 50% 65%;
+    
+}
+video{
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.images-mover{
+    /* pointer-events: none; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   z-index: 999;
+   top: 0%;
+ 
+   
+   transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.video-mover{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+img{
+    width: 100%;
+height: 100%;
+    object-fit: cover;
+}
+/* :hover .images-mover{
+    width: 100%;
+} */
+.second-text{
+    position: absolute;
+    width: 25%;
+    height: 25%;
+
+right: 10%;
+top: 55%;
+
+}
+.second-text h3{
+    font-size: 25px;
+}
+.second-text h2{
+    position: absolute;
+    padding: 10% 0%;
+    font-size: 30px;
+}
+#third-slide{
+ 
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(37, 74, 208); */
+}
+
+
+#fourth{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(208, 143, 37); */
+    scroll-behavior: smooth;
+}
+.fourth-left{
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    /* background-color: beige; */
+    top: 12%;
+    left: 5%;
+    overflow: hidden;
+    transform: rotate(-90deg);
+    font-family: "TWK Lausanne 300";
+    text-transform: lowercase;
+    
+}
+.fourth-left h1{
+    font-size: 120px;
+    font-family: 'TWK Lausanne 300';
+    font-weight: 100;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.fourth-left>h1>span{
+    display: inline-block;
+    transform: translateY(110%);
+}
+#fourth-right-v{
+    /* position: absolute; */
+    width: 30%;
+    height: 85%;
+    /* background-color: aquamarine; */
+    /* top: 0%;
+    right: 50%; */
+    /* margin-right: 20%; */
+margin: 0% 50%;
+}
+#fourth-left-v{
+    /* position: absolute; */
+    width: 20%;
+    height: 50%;
+    /* background-color: rgb(72, 97, 207); */
+    /* top: 100%;
+    right: 10%; */
+    margin: 33% 12%;
+}
+.sir{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: rgb(15, 86, 88);
+
+}
+
+#fifth-slide{
+    /* position: absolute; */
+    width: 100%;
+    height: 40%;
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+
+#scroll-slide{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.scrollbox{
+    position: absolute;
+    width: 320px;
+    height: 180px;
+    /* background-color: rgb(148, 23, 23); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#next{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(41, 101, 181);
+}
+#centerscroll{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 70%;
+    height: 25%;
+    /* background-color: rgb(41, 101, 181); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+}
+.leftscroll{
+    width: 30%;
+    height: 100%;
+    /* background-color: rgb(209, 187, 47); */
+    font-size: 200px;
+    z-index: 999;
+}
+.rightscroll{
+    width: 30%;
+    height: 100%;
+    /* background-color: rgb(31, 56, 35); */
+font-size: 200px;
+z-index: 999;
+}
+.scrolloverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.21);
+    z-index: 99;
+    overflow: hidden;
+}
+.stop{
+ position: absolute;
+ top: 5%;
+ left: 45%;
+ font-size: 20px;
+color: #fff;
+text-transform: capitalize;
+z-index: 999;
+}
+.send{
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    font-size: 20px;
+   width: 22%;
+   color: #fff;
+   text-align: center;
+   z-index: 999;
+   }
+
+#motion-slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+     background-color: #fff; 
+     /* overflow: hidden; */
+     scroll-behavior: smooth;
+}
+.mcenter{
+    position: absolute;
+    width: 25%;
+    height: 75%;
+     /* background-color: rgb(178, 124, 31);  */
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -40%);   
+}
+.mleft{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    
+     top: 30%;
+     left: 20%;
+    
+}
+.mright{
+    position: absolute;
+    width: 32%;
+    height: 100%;
+     /* background-color: rgb(178, 31, 131);  */
+     top: 20%;
+     right: 20%;
+    /* overflow: hidden; */
+}
+
+.motion-l-up{
+    width: 70%;
+    height: 35%;
+    /* background-color: beige; */
+}
+
+.motion-l-down{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+
+    bottom: 0%;
+    right: 20%;
+}
+
+.motion-r-up{
+    position: absolute;
+    width: 45%;
+    height: 50%;
+   top: -10%;
+    left: 20%;
+}
+
+.motion-r-down{
+    position: absolute;
+    width:60%;
+    height: 45%;
+   
+    bottom: 0%;
+    right: 0%;
+  
+}
+
+#spread{
+
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.spread-center{
+
+justify-content: center;
+
+    width: 45%;
+    height: 70%;
+   
+    margin-top: 0%;
+    margin-left: 30%;
+    font-weight: 200;
+    /* text-transform: capitalize; */
+    text-align: center;
+overflow: hidden;
+}
+.spread-text>h5{
+    font-size: 25px;
+margin-top: 5%;
+
+font-weight: 200;
+overflow: hidden;
+}
+.spread-text>h1{
+    font-size: 150px;
+    font-weight: 200;
+    margin-top: 5%;
+  
+    line-height: 180px;
+    overflow: hidden;
+    /* background-color: cyan; */
+}
+
+
+.spread-text>h1>span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+.spread-text>h5>span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+.spread-center>h3{
+    font-size: 35px;
+    margin-top: 12%;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.spread-center h4{
+    font-size: 20px;
+    margin-top: 10%;
+    font-weight: 200;
+    text-decoration: underline;
+}
+
+#ourstory{
+    position: relative;
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    color: #fff;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.container{
+    position: absolute;
+    width: 85%;
+    height: 95%;
+    color: rgba(255, 235, 205, 0.811);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+.container>h1{
+    font-size: 180px;
+    text-transform: capitalize;
+    font-weight: 400;
+
+}
+.container>h2{
+    font-size: 32px;
+    text-transform: capitalize;
+    font-weight: 200;
+
+    margin-top: 5%;
+}
+
+.container>span{
+    position: absolute;
+    width: 50%;
+    margin-top: 3%;
+}
+.ourend{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 20%; 
+  
+    bottom: 5%;
+    font-size: 22px;
+    
+    text-transform: capitalize;
+}
+.ourone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%; 
+    font-weight: 50;
+  
+}
+
+.ourtwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 100%; 
+    font-weight: 100;
+    
+}
+.ourthree{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+    height: 100%;  
+}
+.storyend{
+position: absolute;
+    width: 10%;
+    height: 10%; 
+    bottom: 0%;
+    right: 0%;
+    font-size: 18px;
+    text-decoration-line: underline;
+   
+   
+    
+    text-align: justify;
+}
+.storyvideo{
+    position: absolute;
+        width: 60%;
+        height: 60%; 
+        top: 0%;
+        right: 0%;   
+    }
+
+
+
+
+    @media (width:400px){
+
+
+body {
+/* display: flex; */
+display: inline;
+overflow-x: hidden;
+}
+
+#loder-overlay{
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+background-color:rgba(255, 255, 255, 0.8);
+transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+color: #fff;
+z-index: 9999;
+}
+#loder-overlay>img{
+position: absolute;
+    width: 30%;
+    height: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+#mouse-circle{
+    width: 0%;
+    height: 0%;
+    overflow: hidden;
+}
+        #main{
+ 
+   
+            width: 100%;
+            height: 100vh;
+         overflow-x: hidden;
+         position: relative;
+        }
+        
+        #background{
+            display: flex;
+            width: 100vw;
+            height: 100%;
+            background-color: black;
+            overflow: hidden;
+        
+        }
+        #background img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        object-position: top;
+            overflow: hidden;
+        }
+
+        #nav{
+            position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        height: 8vh;
+        background-color: transparent;
+        padding: 5% 3%;
+        color: #fff;
+        overflow: hidden;
+    }
+    
+    .left-nav{
+        display: flex;
+        align-items: center;
+        width: 25vw;
+        height: 20px;
+        
+        font-size:12px;
+        /* font-family: "TWKLausanne"; */
+    }
+    .right-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50vw;
+        height: 50px;
+    
+        font-size: 12px;
+        font-weight: 50;
+        overflow: hidden;
+    }
+    #header{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: 80%;
+        /* background-color: rgba(157, 30, 30, 0.936); */
+    /* top: 30%; */
+    font-size: 10px;
+    color: #fff;
+    font-family: 'TWK Lausanne 300';
+    /* overflow: hidden; */
+    }
+
+    #overlay-1{
+        position: absolute;
+        width: 80vw;
+        height: 30%;
+        /* background-color: rgba(36, 17, 206, 0.832); */
+        top: 30%;
+    }
+    #overlay-2{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+        width: 80vw;
+        height: 60vh;
+        /* background-color:rgba(195, 20, 148, 0.56); */
+        overflow: visible;
+        top: 55%;
+    }
+    #pera-a{
+    position: absolute;
+        width: 46%;
+        height: 13%; 
+        font-size: 10px;
+        color: #fff;
+        top: 10%;
+        left: 10px;
+    }
+    
+    .main-text{
+        position: absolute;
+        width: 100%;
+    height: 20vh;
+    /* background-color: chartreuse; */
+    color: #fff;
+    font-family: 'TWK Lausanne 300';
+    text-transform: capitalize;
+    line-height: 10px;
+    }
+    .main-text>h2{
+        font-size: 65px;
+        font-weight: 150;
+        line-height: 70px;
+        
+    }
+    .main-text>h1{
+        font-size: 60px;
+       line-height: 60px;
+    }
+
+    #overlay-3{
+        position: absolute;
+                width: 80vw;
+                height: 100%;
+                /* background-color:rgba(25, 202, 233, 0.867); */
+                overflow-x: hidden;
+                overflow-y: visible;
+            }
+            #pera-b{
+        
+                width: 59vw;
+                height: 30%; 
+                font-size: 8px;
+                font-weight: 300;
+                color: #fff;
+                   text-transform: none; 
+                   font-family: 'TWK Lausanne 300';
+                   margin-top: 10px;
+        line-height: 10px;
+        }
+        .lower{
+            display: flex;
+            position: absolute;
+            width: 100%;
+            height: 40%;
+            bottom: 5%;
+          
+            font-size: 10px;
+
+        }
+        .lower-right{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+           justify-content: space-between;
+            width: 35%;
+            height: 100%;
+        
+        right: 0%;
+        text-transform: capitalize;
+        line-height: 15px;
+        }
+        .lower-r2{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 20%;
+            height: 50%;
+        
+        right: 0%;
+line-height: 20px;
+        }
+        .lower-left{
+            
+            justify-content: center;
+            position: absolute;
+            align-items: center;
+            width: 20%;
+            height: 20%;
+            left: 10%;
+            top: 50%;
+        
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-align: 15px;
+        }
+
+        #second-slide{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            /* background-color: rgb(23, 160, 80); */
+        }
+        
+        
+        
+        
+        .first-left{
+            position: absolute;
+            width: 45%;
+            height: 15%;
+            /* background-color: beige; */
+            top: 2%;
+            left: 10%;
+            overflow: hidden;
+        }
+        .first-left h1{
+            font-size: 70px;
+            font-family: 'TWK Lausanne 300';
+            font-weight: 100;
+        }
+        
+        .first-left>h1>span{
+            display: inline-block;
+            transform: translateY(20%);
+        }
+        
+        #second-left-v{
+            /* position: absolute; */
+            width: 50%;
+            height: 60%;
+            background-color: aquamarine;
+            /* top: 50%;
+            left: 10%; */
+            margin: 25% 2%;
+        }
+        .spera{
+            position: absolute;
+            width: 40%;
+            height: 2%;
+            color: black;
+            font-size: 20px;
+        margin-top: 80%;
+        margin-left: 12%;
+        display: none;
+        }
+        #second-right-v{
+            /* position: absolute; */
+            width: 45%;
+            height: 35%;
+            /* background-color: rgb(72, 97, 207); */
+            /* top: 100%;
+            right: 10%; */
+            margin: 90% 55%;
+        }
+        video{
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .images-mover>img{
+            /* pointer-events: none; */
+            display: none;
+            /* position: absolute;
+            width: 100%;
+            height: 100%;
+           z-index: 999;
+           top: 0%;
+         
+           
+           transition: cubic-bezier(0.55, 0.055, 0.675, 0.19); */
+        }
+        
+        .video-mover{
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+        /* img{
+            width: 100%;
+        height: 100%;
+            object-fit: cover;
+        } */
+        /* :hover .images-mover{
+            width: 100%;
+        } */
+        .second-text{
+            position: absolute;
+            width: 35%;
+            height: 25%;
+        
+        right: 8%;
+        top: 28%;
+        
+        }
+        .second-text h3{
+            font-size: 18px;
+        }
+        .second-text h2{
+            position: absolute;
+            padding: 10% 5%;
+            font-size: 10px;
+
+        }
+      #third-slide{
+ 
+            width: 100%;
+            height: 20%;
+            /* background-color: rgb(37, 74, 208); */
+        }
+        
+        #fourth{
+            position: relative;
+            width: 100%;
+            height: 80%;
+            /* background-color: rgb(208, 143, 37); */
+        }
+        .fourth-left{
+            position: absolute;
+            width: 50%;
+            height: 30%;
+            /* background-color: beige; */
+            top: 15%;
+            left: 2%;
+            overflow: hidden;  
+            transform: rotate(-90deg);
+            font-family: "TWK Lausanne 300";
+            text-transform: lowercase;
+            
+        }
+        .fourth-left h1{
+            font-size: 50px;
+            font-family: 'TWK Lausanne 300';
+            font-weight: 100;
+            transition: cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        
+        .fourth-left>h1>span{
+            display: inline-block;
+            transform: translateY(110%);
+        }
+        #fourth-right-v{
+            /* position: absolute; */
+            width: 45%;
+            height: 55%;
+            /* background-color: aquamarine; */
+            /* top: 0%;
+            right: 50%; */
+            /* margin-right: 20%; */
+        margin: 0% 40%;
+        }
+        #fourth-left-v{
+            /* position: absolute; */
+            width: 35%;
+            height: 50%;
+            /* background-color: rgb(72, 97, 207); */
+            /* top: 100%;
+            right: 10%; */
+            margin: 75% 15%;
+        }
+        .sir{
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: rgb(15, 86, 88);
+        
+        }
+
+        #fifth-slide{
+            /* position: absolute; */
+            width: 100%;
+            height: 30%;
+            background-color: #fff;
+        }
+        
+        #scroll-slide{
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .scrollbox{
+            position: absolute;
+            width: 320px;
+            height: 180px;
+            /* background-color: rgb(148, 23, 23); */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #next{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(41, 101, 181);
+        }
+        #centerscroll{
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 90%;
+            height: 25%;
+            /* background-color: rgb(41, 101, 181); */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: capitalize;
+            font-weight: 500;
+            color: #fff;
+        }
+        .leftscroll{
+            width: 32%;
+            height: 50%;
+            background-color: rgba(51, 51, 51, 0.354);
+            font-size: 60px;
+            z-index: 999;
+        }
+        .rightscroll{
+            width: 32%;
+            height: 50%;
+            background-color: rgba(51, 51, 51, 0.31);
+        font-size: 60px;
+        z-index: 999;
+        }
+        .scrolloverlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(51, 51, 51, 0.21);
+            z-index: 99;
+            overflow: hidden;
+        }
+        .stop{
+         position: absolute;
+         top: 5%;
+         left: 40%;
+         font-size: 20px;
+        color: #fff;
+        text-transform: capitalize;
+        z-index: 999;
+        }
+        .send{
+            position: absolute;
+            bottom: 10%;
+            left: 25%;
+            font-size: 12px;
+           width: 52%;
+           color: #fff;
+           text-align: center;
+           z-index: 999;
+           }
+        
+        
+   #motion-slide{
+            position: relative;
+            width: 100%;
+            height: 100%;
+             background-color: #fff; 
+             /* overflow: hidden; */
+        }
+        .mcenter{
+            position: absolute;
+            width: 45%;
+            height: 55%;
+             background-color: rgb(178, 124, 31); 
+             /* top: 50%;
+             left: 50%;
+             transform: translate(-50%, -40%);    */
+        }
+        .mleft{
+            position: absolute;
+            width: 35%;
+            height: 70%;
+            
+             top: 30%;
+             left: 20%;
+            
+        }
+        .mright{
+            position: absolute;
+            width: 32%;
+            height: 70%;
+             /* background-color: rgb(178, 31, 131);  */
+             top: 20%;
+             right: 20%;
+            /* overflow: hidden; */
+        }
+        
+        .motion-l-up{
+            width: 80%;
+            height: 45%;
+            /* background-color: beige; */
+        }
+        
+        .motion-l-down{
+            position: absolute;
+            width: 90%;
+            height: 40%;
+        
+            bottom: 0%;
+            right: 0%;
+        }
+        
+        .motion-r-up{
+            position: absolute;
+            width: 105%;
+            height: 50%;
+           top: 0%;
+            left: 12%;
+        }
+        
+        .motion-r-down{
+            position: absolute;
+            width:90%;
+            height: 40%;
+           
+            bottom: 0%;
+            right: 25%;
+          
+        }
+
+        
+#spread{
+
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.spread-center{
+
+justify-content: center;
+
+    width: 55%;
+    height: 70%;
+   
+    margin-top: 25%;
+    margin-left: 25%;
+    font-weight: 200;
+    /* text-transform: capitalize; */
+    text-align: center;
+overflow: hidden;
+}
+.spread-text>h5{
+    font-size: 20px;
+margin-top: 0%;
+
+font-weight: 200;
+overflow: hidden;
+}
+.spread-text>h1{
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 10%;
+  
+    line-height:58px;
+    overflow: hidden;
+    /* background-color: cyan; */
+}
+
+
+.spread-text>h1>span{
+    display: inline-block;
+    transform: translateY(120%);
+}
+.spread-text>h5>span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+.spread-center>h3{
+    font-size: 12px;
+    margin-bottom: 8%;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.spread-center h4{
+    font-size: 15px;
+    margin-bottom: 10%;
+    font-weight: 200;
+    text-decoration: underline;
+}
+
+
+#ourstory{
+    position: relative;
+    /* position: fixed; */
+    width: 100%;
+    height: 80%;
+    background-color:black;
+    color: #fff;
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    width: 85%;
+    height: 65%;
+    color: rgba(255, 235, 205, 0.811);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+.container>h1{
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 400;
+
+}
+.container>h2{
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 200;
+
+    margin-top: 5%;
+}
+
+.container>span{
+    position: absolute;
+    width: 50%;
+    margin-top: 3%;
+}
+.ourend{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width:70%;
+    height: 30%; 
+  
+    bottom: 5%;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.ourone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%; 
+    font-weight: 50;
+  
+}
+
+.ourtwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 100%; 
+    font-weight: 100;
+    
+}
+.ourthree{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+    height: 100%;  
+}
+.storyend{
+position: absolute;
+    width: 20%;
+    height: 10%; 
+    bottom: 15%;
+    right: 0%;
+    font-size: 10px;
+    text-decoration-line: underline;
+   
+   
+    
+    text-align: justify;
+}
+.storyvideo{
+    position: absolute;
+        width: 45%;
+        height: 40%; 
+        top: 0%;
+        right: 0%;   
+    }
+    }
+
+
+   
+    
+  
